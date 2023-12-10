@@ -1,0 +1,142 @@
+.col-md-4{
+    padding-right: 0;
+}
+
+
+.centered{
+    background-color: #87C4FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    
+}
+.main-container{
+    background-color: #FFFFFF;
+    border: 1px solid #F3EEEA;
+    border-radius: 15px;
+    width: 850px;
+    height: 450px;
+}
+
+
+/* Sidebar Div */
+.sidebar{
+    background-color: #FFFFFF;
+    box-shadow: 2px 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.19);
+    height: 410px;
+    
+}
+.details{
+    height: 450px;
+}
+.student-profile{
+    background-color: whitesmoke;
+    display: flex;
+    margin: auto;
+    margin-top: 15px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+.student-nameID{
+    padding: 5px;
+}
+.student-nameID h1{
+    font-size: 18px;
+    text-align: center;
+    margin: 0;
+}
+.student-nameID p{
+    font-size: 12px;
+    text-align: center;
+}
+.sidebar-links{
+    margin-top: 30px;
+}
+.sidebar-links ul{
+    list-style: none;
+    padding: 10px;
+}
+.sidebar-links ul li{
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+.sidebar-links ul li a {
+    color: black;
+    display: block; /* Change from inline-block to block */
+    font-size: 15px;
+    font-weight: normal;
+    padding: 10px 0 10px 0;
+    text-decoration: none;
+    margin: 15px;
+
+}
+.sidebar-links ul li:hover {
+    background-color: blue;
+}
+
+/*Details*/
+.details{
+    overflow-y: auto;
+    scrollbar-width: none;
+    height: 370px;
+    
+}
+.title{
+    margin-top: 40px;
+}
+.title h1{
+    color: gray;
+    font-size: 24px;
+    letter-spacing: 3px;
+}
+.personal-details{
+    margin-top: 30px;
+}
+.personal-details label{
+    font-weight: 30;
+    font-size: 13px;
+}
+
+input[type=text], input[type=number] {
+    
+    -moz-appearance:textfield;
+    height: 40px;
+    width: 95%;
+    padding: 12px 15px;
+    margin: 8px 5px;
+    display: inline-block;
+    border: 1px solid #B6BBC4;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  
+}
+.button-class{
+    position: absolute;
+    top: 100%;
+    right: 6%;
+}
+.button-class input{
+    margin-top: 25px;
+    padding: 2px;
+    width: 100px;border-radius: 2px;
+}
+.button-class .red{
+    background-color: red;
+    border: .5px solid black;
+    color: #FFFFFF;
+    margin-right: 5px;
+}
+.button-class .blue{
+    background-color: #0014FF;
+    color: #FFFFFF;
+    border: .5px solid black;
+}
