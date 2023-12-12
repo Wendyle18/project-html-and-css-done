@@ -7,28 +7,331 @@
     <link rel="stylesheet" href="assets/css/index.css">
 
     <title>EES</title>
+
+    <style>
+        *{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.col-md-4{
+    padding-right: 0;
+}
+
+
+.centered{
+    background-color: #87C4FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    
+}
+.main-container{
+    background-color: #FFFFFF;
+    border: 1px solid #F3EEEA;
+    border-radius: 15px;
+    width: 850px;
+    height: 450px;
+}
+
+
+/* Sidebar Div */
+.sidebar{
+    background-color: #FFFFFF;
+    box-shadow: 2px 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.19);
+    height: 410px;
+    
+}
+.details{
+    height: 450px;
+}
+.student-profile{
+    background-color: whitesmoke;
+    display: flex;
+    margin: auto;
+    margin-top: 15px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+.student-nameID{
+    padding: 5px;
+}
+.student-nameID h1{
+    font-size: 18px;
+    text-align: center;
+    margin: 0;
+}
+.student-nameID p{
+    font-size: 12px;
+    text-align: center;
+}
+.sidebar-links{
+    margin-top: 30px;
+}
+.sidebar-links ul{
+    list-style: none;
+    padding: 10px;
+}
+.sidebar-links ul li{
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+.sidebar-links ul li a {
+    color: black;
+    display: block; /* Change from inline-block to block */
+    font-size: 15px;
+    font-weight: normal;
+    padding: 10px 0 10px 0;
+    text-decoration: none;
+    margin: 15px;
+
+}
+.sidebar-links ul li:hover {
+    background-color: blue;
+    
+}
+.sidebar-links ul li a:hover{
+    color: #FFFFFF;
+}
+.sidebar-links ul li:active{
+    background-color: #0014FF;
+    color: #FFFFFF;
+}
+/*Details*/
+.details{
+    overflow-y: auto;
+    scrollbar-width: none;
+    height: 370px;
+    
+}
+.title{
+    margin-top: 40px;
+}
+.title h1{
+    color: gray;
+    font-size: 24px;
+    letter-spacing: 3px;
+}
+.personal-details{
+    margin-top: 30px;
+}
+.personal-details label{
+    font-weight: 30;
+    font-size: 13px;
+}
+
+input[type=text], input[type=number] {
+    
+    -moz-appearance:textfield;
+    height: 40px;
+    width: 95%;
+    padding: 12px 15px;
+    margin: 8px 5px;
+    display: inline-block;
+    border: 1px solid #B6BBC4;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  
+}
+.button-class{
+    position: absolute;
+    top: 100%;
+    right: 6%;
+}
+.button-class input{
+    margin-top: 25px;
+    padding: 2px;
+    width: 100px;border-radius: 2px;
+}
+.button-class .red{
+    background-color: red;
+    border: .5px solid #FFFF;
+    color: #FFFFFF;
+    margin-right: 5px;
+}
+.button-class .blue{
+    background-color: #0014FF;
+    color: #FFFFFF;
+    border: .5px solid #FFFF;
+}
+
+@media (max-width: 720px) {
+    .main-container {
+        width: 60%;
+        border-radius: 0; /* Remove border-radius on smaller screens if needed */
+    }
+    .sidebar{
+        width: 95%;
+        box-shadow: none;
+        border: 15px;
+    }
+
+    .col-xs-12,
+    .col-md-4,
+    .col-xs-12,
+    .col-md-8 {
+        width: 100%; /* Make columns take full width on smaller screens */
+    }
+    .details{
+        display: none;
+        padding: 10px;
+
+    }
+    .title{
+        margin-top: 0;
+    }
+    .title h1{
+        font-size: 20px;
+    }
+
+    .personal-details{
+        margin-top: 80px;
+        padding: 5px;
+    }
+    .personal-details label{
+        font-size: 12px;
+    }
+    input[type=text], input[type=number]{
+        display: block;
+        width: 90%;
+        margin-left: 10px;
+        
+    }
+    .button-class{
+        right: 11%;
+        align-items: center;
+        display: flex;
+        padding: 10px;
+        
+    }
+    .button-class .red{
+        margin-top: 55px;
+        margin-right: 5px;
+    }
+    .button-class .blue{
+        margin-left: 5px;
+        margin-top: 55px
+    }
+  
+}
+
+
+@media screen and (min-width:720px) and (max-width:1080px){
+    .col-xs-12,
+    .col-md-4,
+    .col-xs-12,
+    .col-md-8 {
+        width: 100%; /* Make columns take full width on smaller screens */
+    }
+    .main-container{
+        width: 50%;
+    }
+    .details{
+        display: none;
+    }
+  .sidebar{
+    width: 96%;
+    box-shadow: none;
+  }
+  .details h1{
+    margin-left: 20px;
+}
+.details label{
+    margin-left: 20px;
+}
+  input[type=text], input[type=number]{
+    display: block;
+    width: 90%;
+    margin-left: 20px;
+    
+}
+.button-class{
+    right: 22%;
+    align-items: center;
+    display: flex;
+    padding: 10px;
+    
+}
+.button-class .red{
+    margin-top: 55px;
+    margin-right: 20px;
+}
+.button-class .blue{
+    margin-left: 20px;
+    margin-top: 55px
+}
+}
+
+
+    </style>
 </head>
 <body class="centered">
-    <div class="main-container h-100">
-        <div class="row h-100">
-            <!-- First Division (wider) - Takes 8 columns on medium and large screens -->
-            <div class="col-xs-12 col-md-8 h-100">
-                <div style="background-color: lightblue; height: 100%;">
+    <div class="main-container">
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <div class="sidebar">
                     <!-- Content for the first division goes here -->
-                    Wider Division
+                        <div class="student-profile"></div>
+                            <div class="student-nameID">
+                                <h1>Wendyle Christian Seno</h1>
+                                <p>DIET-2020-30-314</p>
+                            </div>
+                                <div class="sidebar-links">
+                                    <ul>
+                                        <li id="personalDetails"><a href="index.html">Personal Details</a></li>
+                                        <li id="famDetails"><a href="/pages/family.html">Family Background</a></li>
+                                        <li id="educDetails"><a href="/pages/educational.html">Educational Background</a></li>
+                                        <li><a href="/pages/other.html">Others</a></li>
+                                    </ul>
+                                </div>
                 </div>
             </div>
 
-            <!-- Second Division - Takes 12 columns on small screens and 4 columns on medium and large screens -->
-            <div class="col-xs-12 col-md-4 h-100">
-                <div style="background-color: lightcoral; height: 100%;">
+           
+            <div class="col-xs-12 col-md-8">
+                <div class="details">
                     <!-- Content for the second division goes here -->
-                    Narrower Division
+                    <div class="title"><h1>Personal Details</h1></div>
+                        <form class="personal-details" id="viewDetails">
+
+                                <label for="lname">Last Name</label>
+                                <input type="text" id="lname" name="lastname" placeholder="">
+
+                                <label for="fname">First Name</label>
+                                <input type="text" id="fname" name="firstname" placeholder="">
+
+                                <label for="mname">Middle Name</label>
+                                <input type="text" id="mname" name="middlename" placeholder="">
+
+                                <label for="age"> Age </label>
+                                <input type="number" id="age" name="age" placeholder="">
+
+                                <label for="Yearlevel">Year Level</label>
+                                <input type="text" id="year" name="yearlevel" placeholder="">
+                                
+                                <label for="section">Section</label>
+                                <input type="text" id="section" name="section" placeholder="">
+
+                                <label for="adviser">Adviser</label>
+                                <input type="text" id="adviser" name="adviser" placeholder="">
+
+                                <div class="button-class">
+                                    <input type="submit" value="Back" class="red">
+                                    <span><input type="submit" value="Next" class="blue"></span>
+                                </div>
+                        </form>
                 </div>
             </div>
         </div>
     </div>
-
+     <!-- <script src="assets/js/index.js"></script> -->
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

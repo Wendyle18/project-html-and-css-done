@@ -1,3 +1,6 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
 .col-md-4{
     padding-right: 0;
 }
@@ -27,6 +30,7 @@
     background-color: #FFFFFF;
     box-shadow: 2px 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.19);
     height: 410px;
+    width: 20px;
     
 }
 .details{
@@ -76,8 +80,15 @@
 }
 .sidebar-links ul li:hover {
     background-color: blue;
+    
 }
-
+.sidebar-links ul li a:hover{
+    color: #FFFFFF;
+}
+.sidebar-links ul li:active{
+    background-color: #0014FF;
+    color: #FFFFFF;
+}
 /*Details*/
 .details{
     overflow-y: auto;
@@ -85,58 +96,39 @@
     height: 370px;
     
 }
-.title{
-    margin-top: 40px;
-}
-.title h1{
-    color: gray;
-    font-size: 24px;
-    letter-spacing: 3px;
-}
-.personal-details{
-    margin-top: 30px;
-}
-.personal-details label{
-    font-weight: 30;
-    font-size: 13px;
+.family, .educational{
+    display: none;
 }
 
-input[type=text], input[type=number] {
-    
-    -moz-appearance:textfield;
-    height: 40px;
-    width: 95%;
-    padding: 12px 15px;
-    margin: 8px 5px;
-    display: inline-block;
-    border: 1px solid #B6BBC4;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-  
-}
-.button-class{
-    position: absolute;
-    top: 100%;
-    right: 6%;
-}
-.button-class input{
-    margin-top: 25px;
-    padding: 2px;
-    width: 100px;border-radius: 2px;
-}
-.button-class .red{
-    background-color: red;
-    border: .5px solid black;
-    color: #FFFFFF;
-    margin-right: 5px;
-}
-.button-class .blue{
-    background-color: #0014FF;
-    color: #FFFFFF;
-    border: .5px solid black;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

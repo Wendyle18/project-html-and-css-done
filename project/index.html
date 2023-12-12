@@ -11,7 +11,6 @@
 <body class="centered">
     <div class="main-container">
         <div class="row">
-            
             <div class="col-xs-12 col-md-4">
                 <div class="sidebar">
                     <!-- Content for the first division goes here -->
@@ -22,22 +21,25 @@
                             </div>
                                 <div class="sidebar-links">
                                     <ul>
-                                        <li><a href="index.html">Personal Details</a></li>
-                                        <li><a href="./pages/family.html">Family Background</a></li>
-                                        <li><a href="./pages/educational.html">Educational Background</a></li>
-                                        <li><a href="./pages/other.html">Others</a></li>
+                                        <li id="personalDetails"><a href="index.html">Personal Details</a></li>
+                                        <li id="famDetails"><a href="/pages/family.html">Family Background</a></li>
+                                        <li id="educDetails"><a href="/pages/educational.html">Educational Background</a></li>
+                                        <li><a href="/pages/other.html">Others</a></li>
                                     </ul>
                                 </div>
                 </div>
-            </div>
+            </div> 
 
            
             <div class="col-xs-12 col-md-8">
                 <div class="details">
                     <!-- Content for the second division goes here -->
                     <div class="title"><h1>Personal Details</h1></div>
-                        <form class="personal-details">
 
+                        <form class="personal-details" id="viewDetails">
+
+                            <!-- Personal Details -->
+                            <fieldset class="pesrsonalDetails">
                                 <label for="lname">Last Name</label>
                                 <input type="text" id="lname" name="lastname" placeholder="">
 
@@ -58,6 +60,90 @@
 
                                 <label for="adviser">Adviser</label>
                                 <input type="text" id="adviser" name="adviser" placeholder="">
+
+                            </fieldset>
+
+                            <!-- Family Background -->
+                            <fieldset class="family">
+                                <label for="mname">Mother's Name</label>
+                                <input type="text" id="mname" name="mothername" placeholder="">
+
+                                <label for="work">Occupation</label>
+                                <input type="text" id="work" name="work" placeholder="">
+
+                                <label for="age"> Age </label>
+                                <input type="number" id="age" name="age" placeholder="">
+
+                                <label for="fname">Father's Name</label>
+                                <input type="text" id="fname" name="fathername" placeholder="">
+
+                                <label for="work">Occupation</label>
+                                <input type="text" id="work" name="work" placeholder="">
+                                
+                                <label for="age"> Age </label>
+                                <input type="number" id="age" name="age" placeholder="">
+                            </fieldset>
+
+
+                            <!-- Educational background -->
+                            <fieldset class="educational">
+
+                                <div class="elementary">
+                                    <h5>Elementary</h5>
+                                </div>
+                                    <label for="elementarySchool">School Name</label>
+                                    <input type="text" id="elemSchool" name="elementarySchool" placeholder="">
+
+                                    <label for="schoolAddress">School Address</label>
+                                    <input type="text" id="addressSchool" name="schoolAddress" placeholder="">
+
+                                    <label for="yearGrad"> Year Graduated </label>
+                                    <input type="number" id="yearGrad" name="yearGrad" placeholder="">
+
+                                <div class="Junior-high">
+                                    <h5>Junior High School</h5>
+                                </div>
+
+                                    <label for="juniorSchool">School Name</label>
+                                    <input type="text" id="juniorSchool" name="juniorSchool" placeholder="">
+
+                                    <label for="schoolAddress">School Address</label>
+                                    <input type="text" id="addressSchool" name="schoolAddress" placeholder="">
+
+                                    <label for="yearGrad"> Year Graduated </label>
+                                    <input type="number" id="yearGrad" name="yearGrad" placeholder="">
+                                
+                                <div class="Senior-high">
+                                    <h5>Senior High School</h5>
+                                </div>
+
+                                    <label for="seniorSchool">School Name</label>
+                                    <input type="text" id="seniorSchool" name="seniorSchool" placeholder="">
+
+                                    <label for="schoolAddress">School Address</label>
+                                    <input type="text" id="addressSchool" name="schoolAddress" placeholder="">
+
+                                    <label for="yearGrad"> Year Graduated </label>
+                                    <input type="number" id="yearGrad" name="yearGrad" placeholder="">
+
+                                <div class="college">
+                                    <h5>College</h5>
+                                </div>
+
+                                    <label for="collegeSchool">School Name</label>
+                                    <input type="text" id="collegeSchool" name="collegeSchool" placeholder="">
+
+                                    <label for="schoolAddress">School Address</label>
+                                    <input type="text" id="addressSchool" name="schoolAddress" placeholder="">
+
+                                    <label for="yearGrad"> Year Graduated </label>
+                                    <input type="number" id="yearGrad" name="yearGrad" placeholder="">
+
+                                <div class="button-class">
+                                    <input type="submit" value="Log out" class="red">
+                                    <span><input type="submit" value="Submit" class="blue"></span>
+                                </div>
+                            </fieldset>
 
                                 <div class="button-class">
                                     <input type="submit" value="Back" class="red">
