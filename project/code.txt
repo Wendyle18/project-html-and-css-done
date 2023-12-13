@@ -1,0 +1,12 @@
+            // $("#sample-a").click(function(){
+            //     $(this).fadeOut(function(){
+            //         $("#sample-b").fadeIn();
+            //     })
+            // })
+
+            // $("#sample-b").click(function(){
+            //     $(this).fadeOut(function(){
+            //         $("#sample-a").fadeIn();
+            //     })
+            // })
+       
