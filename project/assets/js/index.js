@@ -10,6 +10,7 @@ $(document).ready(function () {
                 $(section).fadeIn(500, function () {
                     $(this).css('display', 'block'); 
                     $(this).css('opacity', '1');
+
                     isAnimating = false; 
                     currentSection = section;
                 });
@@ -17,15 +18,14 @@ $(document).ready(function () {
         }
     }
 
-
             $("#familyBackground").hide();
             $("#educationBackground").hide();
 
-       
 
             // Click first link
-            $("#first-link").click(function () {
+            $("#first-link").click(function () {    
                 showSection("#personalDetails");
+                
             });
 
             // Click second link
@@ -38,3 +38,6 @@ $(document).ready(function () {
                 showSection("#educationBackground");
             });
 });
+
+
+

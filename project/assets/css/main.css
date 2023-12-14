@@ -1,29 +1,34 @@
 * {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 
 /* Override css */
 .col-md-4 {
+    border-radius: 15px 0 0 15px;
+    box-shadow: 2px 0 0 0 rgba(67, 142, 185, 1), 0 0 0 0 rgba(0, 0, 0, 0.19);
     padding-right: 0;
     padding-left: 0;
-    width: 250px;
+    width: 239px;
+    background-color: #438EB9;
+    height: 440px;
+    
 }
 
 .col-md-8 {
     padding-right: 0;
-    padding-left: 15;
-    width: 545px;
+    width: 549px;
     height: 440px;
     
 }
 .row{
-    margin-right: 0;
-    margin-left: 0;
+    margin-right: 0px;
+    margin-left: -1px;
+    margin-top: -1px;
 }
-.row::before, ::after{
+/* .row::before, ::after{
     box-sizing: unset;
-}
+} */
 
 /* sidebarbuttonoverride */
 
@@ -54,7 +59,7 @@
 .btn-group-vertical > .btn, .btn-group-vertical > 
 .btn-group, .btn-group-vertical > 
 .btn-group > .btn{
-    width: 250px;
+    width: 241px;
     text-align: left;
     border-radius: 0;
  
@@ -67,14 +72,15 @@
 
 
 .btn-primary{
-    background-color: #FFFFFF;
-    color: black;
+    background-color:#438EB9;
+    color: #FFFFFF;
     border: none;
    
 }
 .btn{
-    padding: 10px 35px;
+    padding: 10px 0 10px 35px;
     letter-spacing: 1px;
+    border-radius: 0;
 }
 .form-control{
     width: 95%;
@@ -85,9 +91,22 @@ label{
 }
 
 
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary{
+    background-color: #FFFFFF;
+    border-right: 1px solid gray;
+    color: #438EB9;
+}
+
+.col-xs-6.col-md-8{
+
+    padding-left: 29px;
+}
+
+
+
 /* Pure CSS */
 .centered {
-    background-color: #87C4FF;
+    background: url("/assets/img/blurry_colorful_bg.webp") repeat fixed center center / cover rgba(0, 0, 0, 0);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,26 +119,28 @@ label{
     background-color: #FFFFFF;
     border: 1px solid #F3EEEA;
     border-radius: 15px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    width: 800px;
-    height: 450px;
+    box-shadow: 3px 12px 17px -10px #01070d;
+    width: 790px;
+    height: 440px;
 }
 .sidebar{
     width: 100%;
-    height: 400px;
-    box-shadow: 2px 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.19);
+    height: unset;
+    
 }
 .student-profile{
-    background-color: whitesmoke;
+    background-color: #FFFFFF;
     display: flex;
     margin: auto;
     margin-top: 25px;
     width: 90px;
     height: 90px;
     border-radius: 50%;
+    border: .2px solid #438EB9;
 }
 .student-nameID{
     padding: 5px;
+    color: #FFFFFF;
 }
 .student-nameID h1{
     font-size: 16px;
@@ -129,6 +150,9 @@ label{
 .student-nameID p{
     font-size: 12px;
     text-align: center;
+}
+.all-details{
+    height: 380px;
 }
 
 /* .all-details > fieldset {
@@ -154,7 +178,7 @@ input[type=number]{
 /* Personal */
 .personal-details{
     
-    height: 350px;
+    height: 340px;
     overflow-y: auto;
     scrollbar-width: none;
 }
@@ -171,7 +195,7 @@ input[type=number]{
 
 .family-background{
    
-    height: 350px;
+    height: 340px;
     overflow-y: auto;
     scrollbar-width: none;
 }
@@ -191,7 +215,7 @@ input[type=number]{
 /* Educational */
 .educational-details{
   
-    height: 350px;
+    height: 340px;
     overflow-y: auto;
     scrollbar-width: none;
 }
@@ -213,48 +237,49 @@ input[type=number]{
 .btn-groupEnder button{
     font-size: 12px;
     width: 100px;
-    height: 30px;
-    padding: 5px;
+    height: 25px;
+    padding: 0px;
 }
 .btn-submit{
     margin-left: 10px;
     background-color: #0079FF;
-    border: .5px solid #45474B;
     color: #FFFFFF;
 }
 .btn-logout{
     background-color: #D80032;
-    border: .5px solid #45474B;
     color: #FFFFFF;
-    padding: 15px;
+    padding: 10px;
 }
 .btn-submit:hover{
-    background-color: #03C988;
+    background-color: #3081D0;
 }
 .btn-logout:hover{
-    background-color: #FFFFFF;
+    background-color: #B31312;
+    color: #FFFFFF;
 }
+
+
+
+
+
 
 @media screen and (max-width:720px){
     .main-container{
         width: 250px;
     }
     .sidebar{
-        box-shadow: none;
+        display: none;
         
        
     }
-
     .col-xs-6.col-md-4{
-        width: 100%;
+        display: none;
     }
     .col-xs-6.col-md-8{
         width: 100%;
         padding-left: 10px;
     }
-    .all-details{
-        display: none;
-    }
+  
     .btn-group, .btn-group-vertical{
         width: 100%;
     }
@@ -285,8 +310,7 @@ input[type=number]{
         width: 420px;
     }
     .sidebar{
-        box-shadow: none;
-        width: 100%;
+        display: none;
         
     }
     .student-nameID{
@@ -296,7 +320,7 @@ input[type=number]{
         font-size: 18px;
     }
     .col-xs-6.col-md-4{
-        width: 100%;
+        display: none;
     }
     .col-xs-6.col-md-8{
         width: 100%;
@@ -328,9 +352,7 @@ input[type=number]{
         padding-left: 30%;
        
     }
-    .all-details{
-        display: none;
-    }
+  
     .btn-submit{
         margin-left: 25px;
         box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;

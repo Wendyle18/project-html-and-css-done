@@ -4,31 +4,659 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/index.css">
-
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/js/jquery.min.js"></script>
     <title>EES</title>
+    <style>
+        * {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+/* Override css */
+.col-md-4 {
+    border-radius: 15px 0 0 15px;
+    box-shadow: 2px 0 0 0 rgba(67, 142, 185, 1), 0 0 0 0 rgba(0, 0, 0, 0.19);
+    padding-right: 0;
+    padding-left: 0;
+    width: 239px;
+    background-color: #438EB9;
+    height: 440px;
+    
+}
+
+.col-md-8 {
+    padding-right: 0;
+    width: 549px;
+    height: 440px;
+    
+}
+.row{
+    margin-right: 0px;
+    margin-left: -1px;
+    margin-top: -1px;
+}
+/* .row::before, ::after{
+    box-sizing: unset;
+} */
+
+/* sidebarbuttonoverride */
+
+
+
+.btn-group, .btn-group-vertical{
+    margin-top: 50px;
+}
+
+.btn-group-vertical > .btn:first-child:not(:last-child){
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+}
+.btn-group-vertical > .btn:last-child:not(:first-child){
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+}
+.btn-group-vertical > .btn:not(:first-child):not(:last-child){
+    border-left: none;
+    border-right: none;
+}
+
+
+
+
+.btn-group-vertical > .btn, .btn-group-vertical > 
+.btn-group, .btn-group-vertical > 
+.btn-group > .btn{
+    width: 241px;
+    text-align: left;
+    border-radius: 0;
+ 
+}
+
+.btn-group-vertical > .btn + .btn, .btn-group-vertical > 
+.btn + .btn-group, .btn-group-vertical > .btn-group + .btn, .btn-group-vertical > .btn-group + .btn-group{
+    margin-top: 10px;
+}
+
+
+.btn-primary{
+    background-color:#438EB9;
+    color: #FFFFFF;
+    border: none;
+   
+}
+.btn{
+    padding: 10px 0 10px 35px;
+    letter-spacing: 1px;
+    border-radius: 0;
+}
+.form-control{
+    width: 95%;
+}
+label{
+    font-size: 12px;
+    font-weight: 200;
+}
+
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary{
+    background-color: #FFFFFF;
+    border-right: 1px solid gray;
+    color: #438EB9;
+}
+
+.col-xs-6.col-md-8{
+
+    padding-left: 29px;
+}
+
+
+
+/* Pure CSS */
+.centered {
+    background: url("/assets/img/blurry_colorful_bg.webp") repeat fixed center center / cover rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.main-container {
+    background-color: #FFFFFF;
+    border: 1px solid #F3EEEA;
+    border-radius: 15px;
+    box-shadow: 3px 12px 17px -10px #01070d;
+    width: 790px;
+    height: 440px;
+}
+.sidebar{
+    width: 100%;
+    height: unset;
+    
+}
+.student-profile{
+    background-color: #FFFFFF;
+    display: flex;
+    margin: auto;
+    margin-top: 25px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: .2px solid #438EB9;
+}
+.student-nameID{
+    padding: 5px;
+    color: #FFFFFF;
+}
+.student-nameID h1{
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
+}
+.student-nameID p{
+    font-size: 12px;
+    text-align: center;
+}
+.all-details{
+    height: 380px;
+}
+
+/* .all-details > fieldset {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.show {
+    opacity: 1;
+} */
+/* Form */
+
+.subheader h5{
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 40px;
+}
+input[type=number]{
+    -moz-appearance:textfield;
+}
+
+
+/* Personal */
+.personal-details{
+    
+    height: 340px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+.personal-details h1{
+    margin-top: 40px;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+.personal{
+    margin-top: 50px ;
+}
+
+
+
+.family-background{
+   
+    height: 340px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+.family-background h1{
+    margin-top: 40px;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+.fam{
+    margin-top: 50px;
+}
+
+
+
+
+
+/* Educational */
+.educational-details{
+  
+    height: 340px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+.educational-details h1{
+    font-size: 24px;
+    margin-top: 40px;
+    letter-spacing: 2px;
+
+}
+
+
+
+/* Buttons */
+.btn-groupEnder{
+    float: right;
+    margin-top: 37px;
+    margin-right: 28px;
+}
+.btn-groupEnder button{
+    font-size: 12px;
+    width: 100px;
+    height: 25px;
+    padding: 0px;
+}
+.btn-submit{
+    margin-left: 10px;
+    background-color: #0079FF;
+    color: #FFFFFF;
+}
+.btn-logout{
+    background-color: #D80032;
+    color: #FFFFFF;
+    padding: 10px;
+}
+.btn-submit:hover{
+    background-color: #3081D0;
+}
+.btn-logout:hover{
+    background-color: #B31312;
+    color: #FFFFFF;
+}
+
+
+
+
+
+
+@media screen and (max-width:720px){
+    .main-container{
+        width: 250px;
+    }
+    .sidebar{
+        display: none;
+        
+       
+    }
+    .col-xs-6.col-md-4{
+        display: none;
+    }
+    .col-xs-6.col-md-8{
+        width: 100%;
+        padding-left: 10px;
+    }
+  
+    .btn-group, .btn-group-vertical{
+        width: 100%;
+    }
+    .btn-groupEnder{
+        float: unset;
+        margin: 0;
+        margin-top: 80px;
+    }
+    .btn-submit{
+        margin-left: 25px;
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    }
+    .btn-logout{
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    }
+    .personal-details h1{
+        font-size: 18px;
+    }
+    .family-background h1{
+        font-size: 18px;
+    }
+   
+}
+
+
+@media screen and (min-width:720px) and (max-width:1080px){
+    .main-container{
+        width: 420px;
+    }
+    .sidebar{
+        display: none;
+        
+    }
+    .student-nameID{
+        margin-top: 20px;
+    }
+    .student-nameID h1{
+        font-size: 18px;
+    }
+    .col-xs-6.col-md-4{
+        display: none;
+    }
+    .col-xs-6.col-md-8{
+        width: 100%;
+        padding-left: 20px;
+    }
+    .btn-group-vertical{
+        margin-top: 40px;
+        width: 100%;
+    }
+    .btn-group-vertical > .btn, .btn-group-vertical > .btn-group, 
+    .btn-group-vertical > .btn-group > .btn{
+        width: 100%;
+    }
+    .btn{
+        padding: 10px 60px;
+    }
+    .btn-group-vertical > .btn:first-child:not(:last-child){
+        width: 100%;
+        padding-left: 30%;
+        
+    }
+    .btn-group-vertical > .btn:not(:first-child):not(:last-child){
+        width: 100%;
+        padding-left: 30%;
+        
+    }
+    .btn-group-vertical > .btn:last-child:not(:first-child){
+        width: 100%;
+        padding-left: 30%;
+       
+    }
+  
+    .btn-submit{
+        margin-left: 25px;
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    }
+    .btn-logout{
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    }
+
+}
+    </style>
 </head>
 <body class="centered">
-    <div class="main-container h-100">
-        <div class="row h-100">
-            <!-- First Division (wider) - Takes 8 columns on medium and large screens -->
-            <div class="col-xs-12 col-md-8 h-100">
-                <div style="background-color: lightblue; height: 100%;">
-                    <!-- Content for the first division goes here -->
-                    Wider Division
-                </div>
-            </div>
+    <!-- <div id="sample-a" style="background-color: red; width: 100px; height: 100px;">
 
-            <!-- Second Division - Takes 12 columns on small screens and 4 columns on medium and large screens -->
-            <div class="col-xs-12 col-md-4 h-100">
-                <div style="background-color: lightcoral; height: 100%;">
-                    <!-- Content for the second division goes here -->
-                    Narrower Division
-                </div>
+    </div>
+    <div id="sample-b" style="background-color: blue; display: none; width: 100px; height: 100px;">
+
+    </div> -->
+    <div class="main-container">
+        <div class="row">
+            <!-- Sidebar -->
+                <div class="col-xs-6 col-md-4">
+                
+                        <div class="sidebar">
+                            <div class="student-profile"></div>
+                                <div class="student-nameID">
+                                    <h1>Wendyle Christian Seno</h1>
+                                    <p>DIET-2020-30-314</p>
+                                </div>
+
+                                <div class="btn-group-vertical">
+                                    <button type="button" class="btn btn-primary" id="first-link">Personal Details</button>
+                                    <button type="button" class="btn btn-primary" id="second-link">Family Background</button>
+                                    <button type="button" class="btn btn-primary" id="third-link">Educational Background</button>
+                                    <button type="button" class="btn btn-primary" id="last-link">Others</button>
+                                </div>
+                    </div>
+            
+            </div>
+            
+            <div class="col-xs-6 col-md-8">
+                <form>
+                   
+                    <div class="all-details">
+                    <!-- Personal -->
+                    <fieldset class="personal-details" id="personalDetails">
+                        <h1>Personal Details</h1>
+                            <div class="personal">
+                                <div class="form-group">
+                                    <label for="lname">Last Name</label>
+                                    <input type="text" id="lname" class="form-control" name="lastname" placeholder="">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="fname">First Name</label>
+                                    <input type="text" id="fname" class="form-control" name="firstname" placeholder="">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="mname">Middle Name</label>
+                                    <input type="text" id="mname" class="form-control" name="middlename" placeholder="">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="age"> Age </label>
+                                    <input type="number" id="age" class="form-control" name="age" placeholder="">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="Yearlevel">Year Level</label>
+                                    <input type="text" id="year" class="form-control" name="yearlevel" placeholder="">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="section">Section</label>
+                                    <input type="text" id="section" class="form-control" name="section" placeholder="">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="adviser">Adviser</label>
+                                    <input type="text" id="adviser" class="form-control" name="adviser" placeholder="">
+                                </div>
+                            </div>
+                    </fieldset>
+
+
+                    <!-- Family -->
+                    <fieldset class="family-background" id="familyBackground">
+                        <h1>Family Background</h1>
+                        <div class="fam">
+                                <div class="form-group">
+                                    <label for="mname">Mother's Name</label>
+                                    <input type="text" id="mname" class="form-control" name="mothername" placeholder="">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="work">Occupation</label>
+                                    <input type="text" id="work" class="form-control" name="work" placeholder="">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="age"> Age </label>
+                                    <input type="number" id="age" class="form-control" name="age" placeholder="">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="fname">Father's Name</label>
+                                    <input type="text" id="fname" class="form-control" name="fathername" placeholder="">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="work">Occupation</label>
+                                    <input type="text" id="work" class="form-control" name="work" placeholder="">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="age"> Age </label>
+                                    <input type="number" id="age" class="form-control" name="age" placeholder="">
+                                </div>
+                            </div>
+                    </fieldset>
+
+                    <!-- Education -->
+                    <fieldset class="educational-details" id="educationBackground">
+                        <h1>Educational Background</h1>
+                        <div class="subheader">
+                            <h5>Elementary</h5>
+                        </div>
+                        <div class="form-group">
+                            <label for="elementarySchool">School Name</label>
+                            <input type="text" id="elemSchool" class="form-control" name="elementarySchool" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="schoolAddress">School Address</label>
+                            <input type="text" id="addressSchool" class="form-control" name="schoolAddress" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="yearGrad"> Year Graduated </label>
+                            <input type="number" id="yearGrad" class="form-control" name="yearGrad" placeholder="">
+                        </div>
+
+
+                        <div class="subheader">
+                            <h5>Junior High School</h5>
+                        </div>
+                        <div class="form-group">
+                            <label for="juniorSchool">School Name</label>
+                            <input type="text" id="juniorSchool" class="form-control" name="juniorSchool" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="schoolAddress">School Address</label>
+                            <input type="text" id="addressSchool" class="form-control" name="schoolAddress" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="yearGrad"> Year Graduated </label>
+                            <input type="number" id="yearGrad" class="form-control" name="yearGrad" placeholder="">
+                        </div>
+
+
+
+                        <div class="subheader">
+                            <h5>Junior High School</h5>
+                        </div>
+                        <div class="form-group">
+                            <label for="juniorSchool">School Name</label>
+                            <input type="text" id="juniorSchool" class="form-control" name="juniorSchool" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="schoolAddress">School Address</label>
+                            <input type="text" id="addressSchool" class="form-control" name="schoolAddress" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="yearGrad"> Year Graduated </label>
+                            <input type="number" id="yearGrad" class="form-control" name="yearGrad" placeholder="">
+                        </div>
+
+
+                        <div class="subheader">
+                            <h5>Senior High School</h5>
+                        </div>
+                        <div class="form-group">
+                            <label for="seniorSchool">School Name</label>
+                            <input type="text" id="seniorSchool" class="form-control" name="seniorSchool" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="schoolAddress">School Address</label>
+                            <input type="text" id="addressSchool" class="form-control" name="schoolAddress" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="yearGrad"> Year Graduated </label>
+                            <input type="number" id="yearGrad" class="form-control" name="yearGrad" placeholder="">
+                        </div>
+
+                        <div class="subheader">
+                            <h5>College</h5>
+                        </div>
+                        <div class="form-group">
+                            <label for="collegeSchool">School Name</label>
+                            <input type="text" id="collegeSchool" class="form-control" name="collegeSchool" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="schoolAddress">School Address</label>
+                            <input type="text" id="addressSchool" class="form-control" name="schoolAddress" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="yearGrad"> Year Graduated </label>
+                            <input type="number" id="yearGrad" class="form-control" name="yearGrad" placeholder="">
+                        </div>
+                    </fieldset>
+                        
+
+                    <!-- Submit button -->
+                    <div class="btn-mobileEnder">
+                        
+                    </div>                    
+                        <div class="btn-groupEnder">
+                            <button type="button" class="btn btn-logout">Log-out</button>
+                            <button type="button" class="btn btn-submit">Submit</button>
+                        </div>
+                    </div>
+                    
+                </form>
             </div>
         </div>
     </div>
-
+    
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+    var currentSection = "#personalDetails"; // Declare default
+    var isAnimating = false; // Tracker of animation
+
+    function showSection(section) {
+        if (!isAnimating && currentSection !== section) {
+            isAnimating = true;
+            $(currentSection).fadeOut(500, function () {
+                $(section).fadeIn(500, function () {
+                    $(this).css('display', 'block');
+                    $(this).css('opacity', '1');
+
+                    isAnimating = false;
+                    currentSection = section;
+                });
+            });
+        }
+    }
+
+    // Function to handle small screens
+    function handleSmallScreens() {
+        $(".sidebar").hide(); // Hide the sidebar for small screens
+
+        // Click first link
+        $("#first-link").click(function () {
+            showSection("#personalDetails");
+        });
+
+        // Click second link
+        $("#second-link").click(function () {
+            showSection("#familyBackground");
+        });
+
+        // Click third link
+        $("#third-link").click(function () {
+            showSection("#educationBackground");
+        });
+    }
+
+    // Function to handle large screens
+    function handleLargeScreens() {
+        // Additional logic for large screens if needed
+
+        // You can add more logic for large screens here
+    }
+
+    // Check screen width and apply appropriate logic
+    function checkScreenSize() {
+        var screenWidth = $(window).width();
+
+        if (screenWidth <= 720) {
+            handleSmallScreens();
+        } else {
+            handleLargeScreens();
+        }
+    }
+
+    // Initial check on document ready
+    checkScreenSize();
+
+    // Check screen size on window resize
+    $(window).resize(function () {
+        checkScreenSize();
+    });
+});
+    </script>
+ 
 </body>
 </html>
