@@ -230,6 +230,7 @@ input[type=number]{
 
 /* Buttons */
 .btn-groupEnder{
+    
     float: right;
     margin-top: 37px;
     margin-right: 28px;
@@ -239,25 +240,58 @@ input[type=number]{
     width: 100px;
     height: 25px;
     padding: 0px;
+    
 }
-.btn-submit{
+.btn-next{
     margin-left: 10px;
     background-color: #0079FF;
     color: #FFFFFF;
 }
-.btn-logout{
+.btn-back{
     background-color: #D80032;
     color: #FFFFFF;
     padding: 10px;
 }
-.btn-submit:hover{
+.btn-next:hover{
     background-color: #3081D0;
 }
-.btn-logout:hover{
+.btn-back:hover{
     background-color: #B31312;
     color: #FFFFFF;
 }
 
+
+
+.btn-mobileEnder{
+    display: none;
+    float: right;
+    margin-top: 37px;
+    margin-right: 28px;
+}
+
+.btn-mobileEnder button{
+    font-size: 12px;
+    width: 100px;
+    height: 25px;
+    padding: 0px;
+}
+.btn-back{
+    background-color: #D80032;
+    color: #FFFFFF;
+    padding: 10px;
+}
+.btn-next{
+    margin-left: 10px;
+    background-color: #0079FF;
+    color: #FFFFFF;
+}
+.btn-next:hover{
+    background-color: #3081D0;
+}
+.btn-back:hover{
+    background-color: #B31312;
+    color: #FFFFFF;
+}
 
 
 
@@ -288,11 +322,11 @@ input[type=number]{
         margin: 0;
         margin-top: 80px;
     }
-    .btn-submit{
+    .btn-next{
         margin-left: 25px;
         box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     }
-    .btn-logout{
+    .btn-back{
         box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     }
     .personal-details h1{
@@ -353,11 +387,11 @@ input[type=number]{
        
     }
   
-    .btn-submit{
+    .btn-next{
         margin-left: 25px;
         box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     }
-    .btn-logout{
+    .btn-back{
         box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     }
 
